@@ -12,8 +12,8 @@ In order to drive the stepper motors, I use DRV8825 modules Those modules are qu
 
 ## Repository
 
-./GTASA/    -> Contains the code that read and compute the plane angle.
-./Arduino/  -> Contains the code that runs on the Arduino. It receives order from the UART and then drive the step motor.
+* GTASA/    → Contains the code that read and compute the plane angle.
+* Arduino/  → Contains the code that runs on the Arduino. It receives order from the UART and then drive the step motor.
 
 ## Interesting Libraries / Links
 
