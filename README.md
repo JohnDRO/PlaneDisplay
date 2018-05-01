@@ -21,6 +21,6 @@ In order to drive the stepper motors, I use DRV8825 modules Those modules are qu
 [GTA San Andreas Memory Addresses](https://www.gtamodding.com/wiki/Memory_Addresses_(SA)) : a description of various memory addresses. It tells us where to find the rotation matrix for instance.
 [Arduino & Driver de moteur pas à pas DRV8825](http://gilles.thebault.free.fr/spip.php?article29) : basic usage and code example on how to use the DRV8825 from an Arduino UNO.
 
-# Angle reading example
+## Angle reading example
 
 ![alt text](https://i.imgur.com/8S0VcbO.png "Angle reading example")
