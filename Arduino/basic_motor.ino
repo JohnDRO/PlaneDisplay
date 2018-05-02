@@ -1,4 +1,14 @@
-// http://gilles.thebault.free.fr/spip.php?article29
+// 
+// Project : Plane Display
+// B.
+//
+// This code receive three angles as input.
+// It then drives a stepper motor thanks to a DRV8825
+// DRV8825 is a nice Texas Instrument IC. Each pulse on its STEP pin will increase the step position of the motor by one.
+//
+// Useful links :
+// Driving the DRV8825 from an Arduino : http://gilles.thebault.free.fr/spip.php?article29
+
 
 int incomingByte = 0;   // for incoming serial data
 String inString = "";
