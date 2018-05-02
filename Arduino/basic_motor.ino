@@ -36,12 +36,8 @@ void setup() {
         angle[0] = 0;
         angle[1] = 0;
         angle[2] = 0;
-        
-        
-        // debug leg
-        pinMode(13, OUTPUT);
-        
-        
+
+        // STEP & DIR DRV8825 's pins
         pinMode(STEP, OUTPUT);
         pinMode(DIR, OUTPUT);
         
@@ -66,26 +62,7 @@ void loop() {
                 }
                 
                 if (incomingByte == '\n') { // Ligne complète               
-                  // On a recu trois nouvelles valeurs pour les angles
-                  // We have to update the motor position :
-                  // wireless.send(angle[0])
-                  // wireless.send(angle[1])
-                  // wireless.send(angle[2])
-                  
-                  
                  if (angle[0] >= 0 && angle[0] <= 360) { // angle OK
-                   Serial.print("-----\n");
-                   Serial.print("angle actuel : ");
-                   Serial.print(angle[0]);
-                   Serial.print("\n");
-                   
-                   Serial.print("angle mot actuel : ");
-                   Serial.print(angle_mot);
-                   Serial.print("\n");
-                   
-                   //digitalWrite(13, HIGH);
-
-                   
                    if (angle[0] >= angle_mot) {
                      digitalWrite(DIR, HIGH);
                      diff = angle[0] - angle_mot;
@@ -119,28 +96,7 @@ void loop() {
                  else { // KO
                    ;
                  }
-                  
-                  
 
-                  if (index != 3) {  
-                    //Serial.print("trame non correcte\n");
-                  }
-                  else {
-                    //Serial.print("trame correcte\n");
-                  }
-                  
-                 // Serial.print("String complet : \n");
-                 // Serial.println(inString);
-                  
-                  //Serial.print("angle 0 : ");
-                //  Serial.println(angle[0]);
-                  
-                  //Serial.print("angle 1 : ");
-                 // Serial.println(angle[1]);
-                  
-                  //Serial.print("angle 2 : ");
-                 // Serial.println(angle[2]);
-                  
                   angle[0] = 0;
                   angle[1] = 0;
                   angle[2] = 0;
@@ -148,15 +104,7 @@ void loop() {
                   // Clear the UART data
                   inString = "";
                   Trame = "";
-                  index = 0;
-                  
-
                 }
         }
-        
-        //digitalWrite(STEP, 1);
-        //delayMicroseconds(duree_pas / 2);
-        //digitalWrite(STEP, 0);
-        //delayMicroseconds(duree_pas / 2);
 }
  
